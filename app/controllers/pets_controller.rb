@@ -16,6 +16,7 @@ class PetsController < ApplicationController
     @pet.owner = Owner.create(name: params["owner"]["name"]) #c'e`un errore
     end
     @pet.owner.save
+    @pet.save
     redirect to "pets/#{@pet.id}"
   end
 
